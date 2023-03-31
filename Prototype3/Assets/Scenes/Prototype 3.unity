@@ -123,6 +123,51 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &144204001
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 144204003}
+  - component: {fileID: 144204002}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &144204002
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 144204001}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a0ab390d56993044d9f1066df487f82b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  score: 0
+--- !u!4 &144204003
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 144204001}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 5.979329, y: 5.419608, z: -17.157131}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &170076733
 GameObject:
   m_ObjectHideFlags: 0
@@ -294,6 +339,9 @@ MonoBehaviour:
   jumpForce: 400
   gravityModifier: 1
   isOnGround: 1
+  doubleJumpUsed: 0
+  doubleSpeed: 0
+  doubleJumpForce: 300
   gameOver: 0
   explosionParticle: {fileID: 637571128}
   dirtParticle: {fileID: 624335380}
@@ -567,14 +615,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 534669902}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.51, y: 3.09, z: -11.08}
+  m_LocalRotation: {x: 0.01077043, y: -0, z: -0, w: 0.999942}
+  m_LocalPosition: {x: 9.77, y: 3.83, z: -14.54}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 1.234, y: 0, z: 0}
 --- !u!82 &534669906
 AudioSource:
   m_ObjectHideFlags: 0
@@ -992,7 +1040,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: deb959058764f944399c98a446d50127, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  obstaclePrefab: {fileID: 7402972898484388736, guid: 4825a7b49da616f46933b747066f3e8a, type: 3}
+  obstaclePrefabs:
+  - {fileID: 7402972898484388736, guid: 4825a7b49da616f46933b747066f3e8a, type: 3}
+  - {fileID: 4019160446479046824, guid: 514ab43be73031b4089e8e601f3925e1, type: 3}
+  - {fileID: 5661075203638687263, guid: 8a117eb93aad33543afb2304a3d51ee4, type: 3}
+  - {fileID: 7591662512977811288, guid: 39581b6a35bce0942937a9ed75b4f945, type: 3}
 --- !u!4 &2081184619
 Transform:
   m_ObjectHideFlags: 0
